@@ -11,9 +11,12 @@
             <div class="mosque"></div>
         </section>
           <!-- Audio untuk lagu -->
-  <audio id="lagu" autoplay loop>
-    <source src="lagu.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung pemutaran audio.
+  <div class="container">
+        <button id="playButton">
+            <span class="icon">🎵</span>
+            <span class="text">Putar Lagu</span>
+        </button>
+        <audio id="audio" src="lagu.mp3">
   </audio>
     <script src="script.js"></script>
     <script src="particles.js"></script>
