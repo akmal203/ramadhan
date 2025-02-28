@@ -1,15 +1,13 @@
-const greeting = document.getElementById('greeting');
-const message = document.getElementById('message');
+// script.js
+const playButton = document.getElementById('playButton');
+const audio = document.getElementById('audio');
 
-// Animasi teks
-setTimeout(() => {
-    greeting.style.color = '#f1c40f';
-    message.style.color = '#f1c40f';
-}, 2000);
-// Memastikan audio diputar otomatis saat halaman dimuat
-document.addEventListener("DOMContentLoaded", function() {
-  const lagu = document.getElementById("lagu");
-  lagu.play().catch(() => {
-    console.log("Autoplay diblokir oleh browser. Silakan klik tombol play manual.");
-  });
+playButton.addEventListener('click', () => {
+    audio.play(); // Memutar lagu
+    playButton.classList.add('hide'); // Menyembunyikan tombol
+});
+
+// Menampilkan tombol kembali setelah lagu selesai
+audio.addEventListener('ended', () => {
+    playButton.classList.remove('hide'); // Menampilkan tombol
 });
